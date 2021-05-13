@@ -3882,7 +3882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1937408178}
-  dist: 5
+  dist: 7
   height: 4
 --- !u!20 &1155955485
 Camera:
