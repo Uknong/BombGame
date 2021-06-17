@@ -27,11 +27,11 @@ public class PlayerController : MonoBehaviour
 
         if (translation != 0 || rotation != 0)
         {
-            ani.SetBool("walk", true);
+            ani.SetBool("Walk Forward", true);
         }
         else
         {
-            ani.SetBool("walk", false);
+            ani.SetBool("Walk Forward", false);
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -42,12 +42,12 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.collider.tag == "Obstacle")
         {
-            ani.SetTrigger("damage");
+            ani.SetTrigger("Take Damage");
             GameManager.instance.AddScore(-1);
         }
         if (collision.collider.tag == "Enermy")
         {
-            ani.SetTrigger("attack01");
+            ani.SetTrigger("Die");
             GameManager.instance.OnPlayerDead();
         }
     }
